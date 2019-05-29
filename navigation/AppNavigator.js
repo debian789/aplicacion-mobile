@@ -1,5 +1,5 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
-import HomeComponent from '../components/HomeComponent'
+import HomeComponent from '../components/home/HomeComponent'
 
 import MenuDrawerNavigator from './MenuDrawerNavigator'
 // import MainTabNavigator from './MainTabNavigator';

@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
 
 
 export default class WelcomeComponent extends React.Component {
@@ -7,7 +7,8 @@ export default class WelcomeComponent extends React.Component {
     render() {
         debugger 
         return (<View>
-            <Text> este es el mensaje de bienvenida</Text>
+            <Text>Hola, bienvenido, sabemos que quieres viajar en un ..... , por favor diligencia el siguiente formulario</Text>
+            <Button title="Diligenciar" onPress={()=> {this.props.navigation.navigate('Form')}}></Button>
         </View>)
     }
 }

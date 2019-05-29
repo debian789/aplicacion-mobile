@@ -16,13 +16,21 @@ export default createStackNavigator({
             }
             return {
             title: `${name || ''}`,
-            headerBackButton: null
+            headerLeft: (
+                <Icon 
+                    style= {{paddingLeft: 10}}
+                    onPress={() => navigation.openDrawer()}
+                    name="md-menu"
+                    size={30}
+                />
+                )
+            // headerBackButton: null
         }
     }}
 }, {
 
     initialRouteName: 'Welcome',
-    defaultNavigationOptions: ({navigation}) => {
+   /* defaultNavigationOptions: ({navigation}) => {
         return {
             headerLeft: (
             <Icon 
@@ -33,5 +41,5 @@ export default createStackNavigator({
             />
             )
     }
-    }
+    }*/
 })
