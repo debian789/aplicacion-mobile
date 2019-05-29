@@ -6,6 +6,6 @@ import HeaderStackNavigator from './HeaderStackNavigator';
 
 
 export default createDrawerNavigator({
-    Dashboard: {screen: HeaderStackNavigator},
-    Dashboard2: {screen: HeaderStackNavigator}
+    Boeing: {screen: HeaderStackNavigator},
+    Airbus: {screen: HeaderStackNavigator}
 })
