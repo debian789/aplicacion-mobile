@@ -1,6 +1,7 @@
 import {createStackNavigator, HeaderBackButton} from 'react-navigation';
 import FormComponent from '../components/FormComponent';
 import WelcomeComponent from '../components/WelcomeComponent';
+import React from 'react'
 import Icon from '@expo/vector-icons/Ionicons'
 
 export default createStackNavigator({
@@ -19,14 +20,18 @@ export default createStackNavigator({
         }
     }}
 }, {
+
     initialRouteName: 'Welcome',
-    defaultNavigationOptions: {
-        headerLeft: (
-        <Icon 
-            style= {{paddingLeft: 10}}
-            onPress={() => navigation.openDrawer()}
-            name="md-menu"
-            size={30}
-        />)
+    defaultNavigationOptions: ({navigation}) => {
+        return {
+            headerLeft: (
+            <Icon 
+                style= {{paddingLeft: 10}}
+                onPress={() => navigation.openDrawer()}
+                name="md-menu"
+                size={30}
+            />
+            )
+    }
     }
 })
