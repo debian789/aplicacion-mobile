@@ -17,13 +17,11 @@ export default createStackNavigator({
             headerLeft: (
                 <Icon 
                     style= {{paddingLeft: 10}}
-                 //   onPress={() => navigation.openDrawer()}
                  onPress = {()=> {navigation.navigate('Welcome', {name: name})}}
                     name="md-arrow-round-back"
                     size={30}
                 />
             )
-            // headerBackButton: null
         }
     }
 },
@@ -40,28 +38,11 @@ export default createStackNavigator({
             headerLeft: (
                 <Icon 
                     style= {{paddingLeft: 10}}
-                 //   onPress={() => navigation.openDrawer()}
                  onPress = {()=> {navigation.navigate('Home')}}
                     name="md-arrow-round-back"
                     size={30}
                 />
             )
-            // headerBackButton: null
         }
     }}
-}, {
-
-   // initialRouteName: 'Welcome',
-   /* defaultNavigationOptions: ({navigation}) => {
-        return {
-            headerLeft: (
-            <Icon 
-                style= {{paddingLeft: 10}}
-                onPress={() => navigation.openDrawer()}
-                name="md-menu"
-                size={30}
-            />
-            )
-    }
-    }*/
 })
