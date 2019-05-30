@@ -1,6 +1,6 @@
 import {createStackNavigator, HeaderBackButton} from 'react-navigation';
-import FormComponent from '../components/FormComponent';
-import WelcomeComponent from '../components/WelcomeComponent';
+import FormComponent from '../components/form/FormComponent';
+import WelcomeComponent from '../components/welcome/WelcomeComponent';
 import React from 'react'
 import Icon from '@expo/vector-icons/Ionicons'
 

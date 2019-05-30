@@ -3,17 +3,19 @@ export default StyleSheet.create({
   
     containerMenu: {
         flex: 1, 
-        
+        flexDirection: 'column',
         alignItems:'center', 
-        justifyContent:'center'
+        justifyContent:'center',
+        backgroundColor: '#36485f',
     },
     btnMenu: {        
         borderColor: '#00ACEE',
-        borderLeftWidth: 5,
+        borderBottomWidth: 5,
         paddingVertical: 10,
         paddingHorizontal: 10,
-        flexDirection: 'row',
-        marginVertical: 20
+        flexDirection: 'column',
+        marginVertical: 20,
+        marginHorizontal: 10
     },
     txtMenu:  {
         fontSize: 25,
