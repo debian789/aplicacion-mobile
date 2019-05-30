@@ -5,7 +5,28 @@ import React from 'react'
 import Icon from '@expo/vector-icons/Ionicons'
 
 export default createStackNavigator({
-    Form: {screen: FormComponent},
+    Form: {screen: FormComponent,
+        navigationOptions: ({navigation}) => {
+            let name  = '';
+            
+            if (navigation && navigation.state && navigation.state.params  && navigation.state.params.name)  {
+                name = navigation.state.params.name
+            }
+            return {
+            title: `${name || ''}`,
+            headerLeft: (
+                <Icon 
+                    style= {{paddingLeft: 10}}
+                 //   onPress={() => navigation.openDrawer()}
+                 onPress = {()=> {navigation.navigate('Welcome', {name: name})}}
+                    name="md-arrow-round-back"
+                    size={30}
+                />
+            )
+            // headerBackButton: null
+        }
+    }
+},
     Welcome: {
         screen: WelcomeComponent, 
         navigationOptions: ({navigation}) => {
@@ -19,17 +40,18 @@ export default createStackNavigator({
             headerLeft: (
                 <Icon 
                     style= {{paddingLeft: 10}}
-                    onPress={() => navigation.openDrawer()}
-                    name="md-menu"
+                 //   onPress={() => navigation.openDrawer()}
+                 onPress = {()=> {navigation.navigate('Home')}}
+                    name="md-arrow-round-back"
                     size={30}
                 />
-                )
+            )
             // headerBackButton: null
         }
     }}
 }, {
 
-    initialRouteName: 'Welcome',
+   // initialRouteName: 'Welcome',
    /* defaultNavigationOptions: ({navigation}) => {
         return {
             headerLeft: (
