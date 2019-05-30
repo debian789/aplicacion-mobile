@@ -4,9 +4,6 @@ import WelcomeStyle from './Welcome.style'
 
 
 export default class WelcomeComponent extends React.Component {
-
-   
-
     render() {
         debugger 
         const {navigation} = this.props;

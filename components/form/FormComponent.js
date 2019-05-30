@@ -54,7 +54,13 @@ const options =  {
 
 
 export default class FormComponent extends React.Component {
+    constructor(props) {
+        super(props)
+         //TODO: Modificar por la url del servidor
+        this.url = 'http://192.168.1.108:3000/create'
+    }
 
+    // Permite validar el rango de edad por defecto
     validateAge(age) {
         console.log(age)
         if(age && (age > 18 && age <= 100)) {
@@ -63,11 +69,12 @@ export default class FormComponent extends React.Component {
             return false
         }
     }
+    // Gestiona el evento de enviar del formulario
     handleSubmit = () => {
         if (this.refs.form.getValue()) {
             if (this.validateAge(this.refs.form.getValue().edad)) {
-                //TODO: Modificar por la url del servidor 
-                fetch('http://192.168.1.108:3000/create',{
+                
+                fetch(this.url,{
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',

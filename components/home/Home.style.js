@@ -12,15 +12,17 @@ export default StyleSheet.create({
         borderColor: '#00ACEE',
         borderBottomWidth: 5,
         paddingVertical: 10,
-        paddingHorizontal: 10,
-        flexDirection: 'column',
-        marginVertical: 20,
+        paddingHorizontal: 30,
+        flexDirection: 'row',
+        marginVertical: 40,
         marginHorizontal: 10
     },
     txtMenu:  {
         fontSize: 25,
+        color: 'white'
     },
     icons: {
+        color: 'white',
         paddingHorizontal: 10
     }
 })

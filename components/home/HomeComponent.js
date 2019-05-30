@@ -15,9 +15,6 @@ export default  class HomeComponent extends React.Component {
             onPress={()=>this.props.navigation.navigate('Welcome',{name: 'Airbus'})}>
                 <Icon style={HomeStyle.icons} name="md-airplane" size={30} ></Icon><Text style={HomeStyle.txtMenu}> Airbus</Text>
             </TouchableOpacity>
-
-
         </View>)
     }
-
 }
